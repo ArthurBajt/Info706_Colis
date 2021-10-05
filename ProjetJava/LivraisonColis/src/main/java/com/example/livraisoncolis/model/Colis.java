@@ -5,11 +5,11 @@ public class Colis {
     private long id;
     private double poid;
     private double valeur;
-    private Object origine;
-    private Object destination;
+    private Position origine;
+    private Position destination;
 
 //    Constructors
-    public Colis(long id, double poid, double valeur, Object origine, Object destination){
+    public Colis(long id, double poid, double valeur, Position origine, Position destination){
         this.id = id;
         this.poid = poid;
         this.valeur = valeur;
@@ -35,8 +35,15 @@ public class Colis {
         return this.valeur;
     }
 
+    public Position getOrigine() {
+        return origine;
+    }
 
-//    Setters
+    public Position getDestination() {
+        return destination;
+    }
+
+    //    Setters
     // ...
 
 
