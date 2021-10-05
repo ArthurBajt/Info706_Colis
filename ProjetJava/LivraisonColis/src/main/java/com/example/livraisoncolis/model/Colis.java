@@ -5,16 +5,18 @@ public class Colis {
     private long id;
     private double poid;
     private double valeur;
-    private Position origine;
-    private Position destination;
+    private String origine;
+    private String destination;
+    private Position acheminement;
 
 //    Constructors
-    public Colis(long id, double poid, double valeur, Position origine, Position destination){
+    public Colis(long id, double poid, double valeur, String origine, String destination, Position achemeniment){
         this.id = id;
         this.poid = poid;
         this.valeur = valeur;
         this.origine = origine;
         this.destination = destination;
+        this.acheminement = acheminement;
     }
 
 
@@ -22,7 +24,10 @@ public class Colis {
     // Todo
 
 
-//    Getters
+
+
+
+	//    Getters
     public long getId() {
         return this.id;
     }
@@ -35,14 +40,18 @@ public class Colis {
         return this.valeur;
     }
 
-    public Position getOrigine() {
+    public String getOrigine() {
         return origine;
     }
 
-    public Position getDestination() {
+    public String getDestination() {
         return destination;
     }
 
+    public Position getAcheminement() {
+		return acheminement;
+	}
+    
     //    Setters
     // ...
 
