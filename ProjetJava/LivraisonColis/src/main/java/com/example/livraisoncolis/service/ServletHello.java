@@ -1,4 +1,4 @@
-package com.example.livraisoncolis;
+package com.example.livraisoncolis.service;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
