@@ -27,8 +27,15 @@ public class ColisEJB {
 	}
 
 
+	public Colis findColis(long id){
+		Colis c = em.find(Colis.class, id);
+		return c;
+	}
+	
     public void removeColis(long id){
 		Colis c = em.find(Colis.class, id);
 		em.remove(c);
     }
+    
+    
 }
