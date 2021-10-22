@@ -8,6 +8,8 @@ import com.example.livraisoncolis.model.Colis;
 
 import javax.servlet.annotation.*;
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.ejb.EJB;
 
 @WebServlet(name = "ServletSuivi", value = "/Suivi")
@@ -24,6 +26,8 @@ public class ServletSuivi extends HttpServlet {
        long id = Long.parseLong(request.getParameter("id"));
     	
        Colis c = ejb.findColis(id);
+       
+      
        
        request.setAttribute("colis", c);
        

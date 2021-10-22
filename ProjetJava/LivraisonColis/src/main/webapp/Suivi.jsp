@@ -9,14 +9,19 @@
 	</head>
 	<body>
 	    <h1>Suivre votre Colis</h1>
+	    
+	    <form method="get" action="ServletSuivi">
+			Afficher votre colis grace a son Id : <input name="id"  type="text" value="${param.id }">
+			<input type="submit" name="valider"  value="OK">
+		</form>
+	    
 		<p>
 			Depart : ${ colis.origine } <br>
 			Arrive : ${ colis.destination } <br>
 			Latitude : ${ colis.acheminement.latitude } <br>
 			Longitude : ${ colis.acheminement.longitude } <br>
 			Emplacement : ${ colis.acheminement.emplacement } <br>
-			Etat : ${ colis.acheminement.etat } <br>
-			
+			Etat : ${ colis.acheminement.etat } <br>			
 		</p>
 	</body>
 </html>
