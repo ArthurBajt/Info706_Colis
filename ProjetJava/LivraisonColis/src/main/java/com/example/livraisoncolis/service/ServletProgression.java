@@ -9,7 +9,7 @@ import java.io.IOException;
 public class ServletProgression extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/Progression.jsp");
+        request.getRequestDispatcher("/Progression.jsp").forward(request, response);
     }
 
     @Override
