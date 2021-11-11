@@ -23,7 +23,10 @@ public class ServletSuivi extends HttpServlet {
 	
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-       long id = Long.parseLong(request.getParameter("id"));
+       long id = -1;
+       if (request.getParameter("id") != null){
+           id = Long.parseLong(request.getParameter("id"));
+       }
     	
        Colis c = ejb.findColis(id);
        request.setAttribute("colis", c);
