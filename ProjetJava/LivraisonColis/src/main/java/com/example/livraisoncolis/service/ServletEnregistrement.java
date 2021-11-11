@@ -24,7 +24,6 @@ public class ServletEnregistrement extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        PrintWriter pw = response.getWriter();
         double valeur = Double.parseDouble(request.getParameter("valeur"));
         double poid = Double.parseDouble(request.getParameter("poid"));
         String origine = request.getParameter("origine");
@@ -33,9 +32,11 @@ public class ServletEnregistrement extends HttpServlet {
 
         Colis c = colisEJB.addColis(poid, valeur, origine, destination);
 
-        pw.println("Nouveau colis avec le num : " + Long.toString(c.getId()));
-        System.out.println("Nouveau colis avec le num : " + Long.toString(c.getId()));
+//        PrintWriter pw = response.getWriter();
+//        pw.println("Nouveau colis avec le num : " + Long.toString(c.getId()));
+//        System.out.println("Nouveau colis avec le num : " + Long.toString(c.getId()));
+//        pw.close();
 
-        pw.close();
+        response.sendRedirect(request.getContextPath() + "/Suivi?id=" + Long.toString(c.getId()));
     }
 }
