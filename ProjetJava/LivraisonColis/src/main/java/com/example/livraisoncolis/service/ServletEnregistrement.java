@@ -34,7 +34,7 @@ public class ServletEnregistrement extends HttpServlet {
         Colis c = colisEJB.addColis(poid, valeur, origine, destination, pos);
 
         pw.println("Nouveau colis avec le num : " + Long.toString(c.getId()));
-
+        System.out.println("Nouveau colis avec le num : " + Long.toString(c.getId()));
 
         pw.close();
     }

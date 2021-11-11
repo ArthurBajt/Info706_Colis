@@ -9,7 +9,6 @@ import com.example.livraisoncolis.model.Colis;
 import com.example.livraisoncolis.model.Position;
 
 @Stateless
-@LocalBean
 public class ColisEJB {
 
 	@PersistenceContext

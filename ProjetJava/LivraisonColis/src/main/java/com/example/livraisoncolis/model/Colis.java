@@ -2,9 +2,11 @@ package com.example.livraisoncolis.model;
 
 import java.io.Serializable;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+@Entity
 public class Colis implements Serializable {
 
 	
@@ -18,7 +20,13 @@ public class Colis implements Serializable {
     private Position acheminement;
 
 //    Constructors
+    
+    public Colis() {
+    	
+    }
+    
     public Colis(double poid, double valeur, String origine, String destination, Position achemeniment){
+    	super();
         this.poid = poid;
         this.valeur = valeur;
         this.origine = origine;
