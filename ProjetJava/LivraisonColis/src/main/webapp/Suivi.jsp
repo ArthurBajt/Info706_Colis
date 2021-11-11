@@ -10,9 +10,9 @@
 	<body>
 	    <h1>Suivre votre Colis</h1>
 	    
-	    <form method="get" action="ServletSuivi">
+	    <form method="get" action="Suivi">
 			Afficher votre colis grace a son Id : <input name="id"  type="text" value="${colis.id }">
-			<input type="submit" name="valider"  value="OK">
+			<input type="submit">
 		</form>
 	    
 		<p>
