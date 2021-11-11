@@ -25,16 +25,15 @@ public class ServletEnregistrement extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter pw = response.getWriter();
-        long id = (long) System.currentTimeMillis();
         double valeur = Double.parseDouble(request.getParameter("valeur"));
         double poid = Double.parseDouble(request.getParameter("poid"));
         String origine = request.getParameter("origine");
         String destination = request.getParameter("destination");
         Position pos = new Position(0.0, 0.0, "Entrepot");
 
-        colisEJB.addColis(poid, valeur, origine, destination, pos);
+        Colis c = colisEJB.addColis(poid, valeur, origine, destination, pos);
 
-        pw.println("Nouveau colis avec le num : " + Long.toString(id));
+        pw.println("Nouveau colis avec le num : " + Long.toString(c.getId()));
 
 
         pw.close();
