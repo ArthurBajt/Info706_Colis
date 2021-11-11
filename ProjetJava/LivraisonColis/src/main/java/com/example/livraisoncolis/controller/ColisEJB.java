@@ -19,8 +19,8 @@ public class ColisEJB {
 	public ColisEJB() {
 	}
 	
-	public Colis addColis(long id, double poid, double valeur, String origine, String destination, Position achemeniment) {
-		Colis c = new Colis(id, poid, valeur, origine, destination, achemeniment);
+	public Colis addColis(double poid, double valeur, String origine, String destination, Position achemeniment) {
+		Colis c = new Colis(poid, valeur, origine, destination, achemeniment);
 		em.persist(c);
 		
 		return c;

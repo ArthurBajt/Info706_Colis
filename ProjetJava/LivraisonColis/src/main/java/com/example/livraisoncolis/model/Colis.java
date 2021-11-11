@@ -1,8 +1,16 @@
 package com.example.livraisoncolis.model;
 
-public class Colis {
+import java.io.Serializable;
 
-    private long id;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+public class Colis implements Serializable {
+
+	
+	@Id @GeneratedValue
+	private long id;
+	
     private double poid;
     private double valeur;
     private String origine;
@@ -10,8 +18,7 @@ public class Colis {
     private Position acheminement;
 
 //    Constructors
-    public Colis(long id, double poid, double valeur, String origine, String destination, Position achemeniment){
-        this.id = id;
+    public Colis(double poid, double valeur, String origine, String destination, Position achemeniment){
         this.poid = poid;
         this.valeur = valeur;
         this.origine = origine;

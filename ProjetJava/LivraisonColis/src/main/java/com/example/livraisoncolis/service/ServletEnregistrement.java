@@ -32,7 +32,7 @@ public class ServletEnregistrement extends HttpServlet {
         String destination = request.getParameter("destination");
         Position pos = new Position(0.0, 0.0, "Entrepot");
 
-//        colisEJB.addColis(id, poid, valeur, origine, destination, pos);
+        colisEJB.addColis(poid, valeur, origine, destination, pos);
 
         pw.println("Nouveau colis avec le num : " + Long.toString(id));
 
