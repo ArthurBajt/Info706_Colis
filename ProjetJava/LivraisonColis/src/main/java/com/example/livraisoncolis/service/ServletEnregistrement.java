@@ -29,9 +29,9 @@ public class ServletEnregistrement extends HttpServlet {
         double poid = Double.parseDouble(request.getParameter("poid"));
         String origine = request.getParameter("origine");
         String destination = request.getParameter("destination");
-        Position pos = new Position(0.0, 0.0, "Entrepot");
+        //Position pos = new Position(0.0, 0.0, "Entrepot");
 
-        Colis c = colisEJB.addColis(poid, valeur, origine, destination, pos);
+        Colis c = colisEJB.addColis(poid, valeur, origine, destination);
 
         pw.println("Nouveau colis avec le num : " + Long.toString(c.getId()));
         System.out.println("Nouveau colis avec le num : " + Long.toString(c.getId()));

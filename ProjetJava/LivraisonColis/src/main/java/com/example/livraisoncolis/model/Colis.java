@@ -17,7 +17,7 @@ public class Colis implements Serializable {
     private double valeur;
     private String origine;
     private String destination;
-    private Position acheminement;
+    //private Position acheminement;
 
 //    Constructors
     
@@ -26,13 +26,13 @@ public class Colis implements Serializable {
 
     }
     
-    public Colis(double poid, double valeur, String origine, String destination, Position acheminement){
+    public Colis(double poid, double valeur, String origine, String destination){
     	super();
         this.poid = poid;
         this.valeur = valeur;
         this.origine = origine;
         this.destination = destination;
-        this.acheminement = acheminement;
+        //this.acheminement = acheminement;
     }
 
 
@@ -64,9 +64,9 @@ public class Colis implements Serializable {
         return destination;
     }
 
-    public Position getAcheminement() {
+   /* public Position getAcheminement() {
 		return acheminement;
-	}
+	}*/
     
     //    Setters
     // ...
@@ -81,7 +81,6 @@ public class Colis implements Serializable {
                 ", poid=" + this.poid +
                 ", valeur=" + this.valeur +
                 ", origine=" + this.origine.toString() +
-                ", destination=" + this.destination.toString() +
                 '}';
     }
 }
