@@ -22,10 +22,11 @@ public class Colis implements Serializable {
 //    Constructors
     
     public Colis() {
-    	
+    	super();
+
     }
     
-    public Colis(double poid, double valeur, String origine, String destination, Position achemeniment){
+    public Colis(double poid, double valeur, String origine, String destination, Position acheminement){
     	super();
         this.poid = poid;
         this.valeur = valeur;
