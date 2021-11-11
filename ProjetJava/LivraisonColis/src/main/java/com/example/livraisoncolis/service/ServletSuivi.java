@@ -26,9 +26,6 @@ public class ServletSuivi extends HttpServlet {
        long id = Long.parseLong(request.getParameter("id"));
     	
        Colis c = ejb.findColis(id);
-       
-      
-       
        request.setAttribute("colis", c);
        
        request.getRequestDispatcher("/Suivi.jsp").forward(request, response);
