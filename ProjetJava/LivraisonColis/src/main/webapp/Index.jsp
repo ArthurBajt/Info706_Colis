@@ -40,7 +40,6 @@
             <th scope="col">Valeur</th>
             <th scope="col">Poid</th>
             <th scope="col"></th>
-            <th scope="col"></th>
             </thead>
 
             <tbody>
@@ -50,8 +49,7 @@
                 <th scope="col">${colis.destination}</th>
                 <th scope="col">${colis.valeur}e</th>
                 <th scope="col">${colis.poid} kg</th>
-                <th scope="col"><a href="#?id=${colis.id}" class="btn btn-lg btn-outline-primary fs-6">Modifier</a></th>
-                <th scope="col"><a href="#?id=${colis.id}" class="btn btn-lg btn-outline-danger fs-6">Supprimer</a></th>
+                <th scope="col"><a href="Progression?id=${colis.id}" class="btn btn-lg btn-outline-primary fs-6">Modifier</a></th>
             </c:forEach>
             </tbody>
         </table>
