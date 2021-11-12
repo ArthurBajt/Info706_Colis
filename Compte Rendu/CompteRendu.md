@@ -1,4 +1,5 @@
 # Compte rendu TP Info 706
+> Lacerenza Loris & Bajt Arthur
 - <a href="#1">Utilisation de l'application</a>
 - <a href="#2">Choix d'implémentation</a>
 
@@ -34,9 +35,7 @@ Ici on peut modifier la progression d'un colis.
 
 On peut aussi rechercher un colis à modifier.
 
-### Supprimer colis
-<img src="img/Supprimer.png"/>
-// todo
+Ou le supprimer.
 
 ---
 
