@@ -1,5 +1,8 @@
 package com.example.livraisoncolis.model;
 
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
 public class Position implements Serializable {
@@ -10,11 +13,15 @@ public class Position implements Serializable {
 	Etat etat;
 	
 	public Position(double lat, double longi, String emp) {
+		super();
 		this.latitude=lat;
 		this.longitude=longi;
 		this.emplacement=emp;
 		this.etat=Etat.ENREGISTREMENT;
-		
+	}
+
+	public Position(){
+		super();
 	}
 
 	
