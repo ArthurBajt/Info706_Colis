@@ -42,16 +42,16 @@
             <th scope="col"></th>
             </thead>
 
-            <tbody>
             <c:forEach items="${requestScope['list']}" var="colis">
-                <th scope="col"><a href="Suivi?id=${colis.id}">${colis.id}</a></th>
-                <th scope="col">${colis.origine}</th>
-                <th scope="col">${colis.destination}</th>
-                <th scope="col">${colis.valeur}e</th>
-                <th scope="col">${colis.poid} kg</th>
-                <th scope="col"><a href="Progression?id=${colis.id}" class="btn btn-lg btn-outline-primary fs-6">Modifier</a></th>
+                <tbody>
+                    <th scope="col"><a href="Suivi?id=${colis.id}">${colis.id}</a></th>
+                    <th scope="col">${colis.origine}</th>
+                    <th scope="col">${colis.destination}</th>
+                    <th scope="col">${colis.valeur}e</th>
+                    <th scope="col">${colis.poid} kg</th>
+                    <th scope="col"><a href="Progression?id=${colis.id}" class="btn btn-lg btn-outline-primary fs-6">Modifier</a></th>
+                </tbody>
             </c:forEach>
-            </tbody>
         </table>
 
     </div>
