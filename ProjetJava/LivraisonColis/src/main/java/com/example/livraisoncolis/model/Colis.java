@@ -67,9 +67,9 @@ public class Colis implements Serializable {
         return destination;
     }
 
-   /* public Position getAcheminement() {
+   public Position getAcheminement() {
 		return acheminement;
-	}*/
+	}
     
     //    Setters
     // ...

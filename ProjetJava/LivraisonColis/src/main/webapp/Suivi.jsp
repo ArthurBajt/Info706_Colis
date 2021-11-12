@@ -18,10 +18,12 @@
 		<p>
 			Depart : ${ colis.origine } <br>
 			Arrive : ${ colis.destination } <br>
-<%--			Latitude : ${ colis.acheminement.latitude } <br>--%>
-<%--			Longitude : ${ colis.acheminement.longitude } <br>--%>
-<%--			Emplacement : ${ colis.acheminement.emplacement } <br>--%>
-<%--			Etat : ${ colis.acheminement.etat } <br>			--%>
+			Poids : ${ colis.poid } <br>
+			Valeur : ${ colis.valeur } <br>
+			Latitude : ${ colis.acheminement.latitude } <br>
+			Longitude : ${ colis.acheminement.longitude } <br>
+			Emplacement : ${ colis.acheminement.emplacement } <br>
+			Etat : ${ colis.acheminement.etat } <br>			
 		</p>
 	</body>
 </html>

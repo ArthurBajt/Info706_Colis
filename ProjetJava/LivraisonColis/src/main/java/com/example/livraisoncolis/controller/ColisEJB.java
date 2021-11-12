@@ -4,8 +4,10 @@ import javax.ejb.LocalBean;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.TypedQuery;
 
 import com.example.livraisoncolis.model.Colis;
+import com.example.livraisoncolis.model.Etat;
 import com.example.livraisoncolis.model.Position;
 
 @Stateless
@@ -18,8 +20,8 @@ public class ColisEJB {
 	public ColisEJB() {
 	}
 	
-	public Colis addColis(double poid, double valeur, String origine, String destination, Position pos) {
-		Colis c = new Colis(poid, valeur, origine, destination, pos);
+	public Colis addColis(double poid, double valeur, String origine, String destination, Position acheminement) {
+		Colis c = new Colis(poid, valeur, origine, destination, acheminement);
 		em.persist(c);
 		
 		return c;
@@ -34,6 +36,15 @@ public class ColisEJB {
     public void removeColis(long id){
 		Colis c = em.find(Colis.class, id);
 		em.remove(c);
+    }
+    
+    public void updateColis(long id, double latitude, double longitude, String emplacement, Etat etat) {
+		Colis c = em.find(Colis.class, id);
+		c.getAcheminement().setLatitude(latitude);
+		c.getAcheminement().setLongitude(longitude);
+		c.getAcheminement().setEmplacement(emplacement);
+		c.getAcheminement().setEtat(etat);
+		em.merge(c);
     }
     
     
