@@ -54,8 +54,10 @@ public class ServletProgression extends HttpServlet {
             Colis c = ejb.updateColis(id, latitude,longitude,emplacement,etat);
             response.sendRedirect(request.getContextPath() + "/Progression?id=" + Long.toString(c.getId()));
 
+        }else {
+        	
+        	response.sendRedirect(request.getContextPath() + "/Progression" );
         }
-        response.sendRedirect(request.getContextPath() + "/Progression" );
 
 
     }

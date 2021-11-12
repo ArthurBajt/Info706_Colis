@@ -34,8 +34,4 @@ public class ServletSuivi extends HttpServlet {
        request.getRequestDispatcher("/Suivi.jsp").forward(request, response);
     }
 
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-    }
 }

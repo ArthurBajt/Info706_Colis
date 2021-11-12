@@ -39,7 +39,7 @@
             <th scope="col">Origine</th>
             <th scope="col">Destination</th>
             <th scope="col">Valeur</th>
-            <th scope="col">Poid</th>
+            <th scope="col">Poids</th>
             <th scope="col"></th>
             </thead>
 
