@@ -10,11 +10,11 @@
 Lien de l'application une fois lancée :
 <a href="localhost:8080/LivraisonColis-1.0-SNAPSHOT/">localhost:8080/LivraisonColis-1.0-SNAPSHOT/</a>
 
-> note : Le projet à été creer avec Inteliji. Ce qui donne cet Url pour l'application.
+> note : Le projet à été créé avec Inteliji. Ce qui donne cet Url pour l'application.
 
 <img src="img/index.png"/>
 
-La page d'accueil du site vous propose de visualiser les colis en transites.
+La page d'accueil du site vous propose de visualiser les colis en transit.
 
 Depuis celle-ci vous pouvez également :
 - Ajouter un nouveau colis, depuis *"Enregistrement"*.
@@ -57,7 +57,7 @@ public class Colis implements Serializable {
   }
 ```
 
-Où **acheminement** est une **Position** que nous avons rendu *@Embeddable* pour y stoquer dans une base de donnée.
+Où **acheminement** est une **Position** que nous avons rendu *@Embeddable* pour y stocker dans une base de données.
 ```java
 @Embeddable
 public class Position implements Serializable {
@@ -72,7 +72,7 @@ public class Position implements Serializable {
 
 
 ### Classe ColisEJB
-Nous avons creer cette classe pour gerer nos colis dans la base de donnée :
+Nous avons créé cette classe pour gerer nos colis dans la base de données :
 ```java
 @Stateless
 public class ColisEJB {
@@ -99,21 +99,21 @@ public class ColisEJB {
 
 
 ### Les servlets
-Nous avons créé 5 servelets pour :
+Nous avons créé 5 servlets pour :
 
 #### L'index
-- La methode get, affiche les colis et rend la page Index.jsp avec les colis.
+- La méthode get, affiche les colis et rend la page Index.jsp avec les colis.
 
 #### L'ajout de Colis
-- La méthode **get** permet simplement d'acceder au formulaire.
-- Et la méthode **post** creer un colis avec les donnée du formulaire.
+- La méthode **get** permet simplement d'accéder au formulaire.
+- Et la méthode **post** crée un colis avec les données du formulaire.
 
-#### Le suivis d'un colis
-- Affiche le colis à un id donnée dans la requette.
+#### Le suivi d'un colis
+- Affiche le colis à un id donné dans la requête.
 
 #### La modification d'un colis
-- La méthode **get** permet simplement d'acceder a un formulaire pour modifier le colis à l'id donnée dans la requette.
-- Et la méthode **post** modifie le colis avec les nouvelles donnée du formulaire.
+- La méthode **get** permet simplement d'accéder à un formulaire pour modifier le colis à l'id donnée dans la requête.
+- Et la méthode **post** modifie le colis avec les nouvelles données du formulaire.
 
 #### La suppression d'un colis
 - La méthode **post** permet simplement de supprimer un colis via l'id précédemment saisi pour accéder aux fonctions de modification
