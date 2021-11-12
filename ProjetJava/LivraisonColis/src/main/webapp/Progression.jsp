@@ -1,8 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-         pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
 <head>
+	<meta charset="UTF-8">
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
 		  rel="stylesheet"
 		  integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
@@ -30,7 +30,7 @@
 	<form method="post" action="Progression">
 		<!-- Rechercher -->
 		<div class="row border p-2 text-center">
-			<h4 class="col">Num�ro du colis</h4>
+			<h4 class="col">Numéro du colis</h4>
 			<input class="col" name="id"  type="text" value="${colis.id }">
 			<input type="submit" formmethod="get" class="col-3 btn btn-success m-1" value="Rechercher">
 		</div>
@@ -62,8 +62,8 @@
 				<option value="ENREGISTREMENT" ${colis.acheminement.etat.name() == "ENREGISTREMENT" ? "selected " : ''}>Enregistrement</option>
 				<option value="EN_ATTENTE" ${colis.acheminement.etat == "EN_ATTENTE" ? "selected " : ''}>En attente</option>
 				<option value="EN_ACHEMINEMENT" ${colis.acheminement.etat == "EN_ACHEMINEMENT" ? "selected " : ''}>En acheminement</option>
-				<option value="BLOQUE" ${colis.acheminement.etat == "BLOQUE" ? "selected " : ''}>Bloqu�</option>
-				<option value="LIVRE" ${colis.acheminement.etat == "LIVRE" ? "selected " : ''}>Livr�</option>
+				<option value="BLOQUE" ${colis.acheminement.etat == "BLOQUE" ? "selected " : ''}>Bloqué</option>
+				<option value="LIVRE" ${colis.acheminement.etat == "LIVRE" ? "selected " : ''}>Livré</option>
 			</select>
 		</div>
 
