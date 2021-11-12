@@ -24,6 +24,9 @@ public class ServletProgression extends HttpServlet {
 	
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    	
+    	
+    	
     	 long id = -1;
          if (request.getParameter("id") != null){
              id = Long.parseLong(request.getParameter("id"));
@@ -51,5 +54,15 @@ public class ServletProgression extends HttpServlet {
         Colis c = ejb.updateColis(id, latitude,longitude,emplacement,etat);
 
         response.sendRedirect(request.getContextPath() + "/Progression?id=" + Long.toString(c.getId()));
+    }
+    @Override
+    protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    	long id = -1;
+        if (request.getParameter("id") != null){
+            id = Long.parseLong(request.getParameter("id"));
+            ejb.removeColis(id);
+        }
+        response.sendRedirect(request.getContextPath() + "/Progression" );
+
     }
 }

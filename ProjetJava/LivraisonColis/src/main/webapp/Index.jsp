@@ -17,7 +17,7 @@
 
 
         <main>
-            <h2>Il y a ${requestScope['nbColis']} coli(s) en transit</h2>
+            <h2>Il y a ${requestScope['nbColis']} colis en transite</h2>
 
             <div>
                 <c:forEach items="${requestScope['list']}" var="colis">

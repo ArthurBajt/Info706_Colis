@@ -32,16 +32,17 @@
             <p>Etat du colis</p>
             <select name="etat">
                 <option value="ENREGISTREMENT" ${colis.acheminement.etat.name() == "ENREGISTREMENT" ? "selected " : ''}>Enregistrement</option>
-	            <option value="EN_ATTENTE" ${colis.acheminement.etat == "EN_ATTENTE" ? "selected " : ''}>En attente</option>
-	            <option value="EN_ACHEMINEMENT" ${colis.acheminement.etat == "EN_ACHEMINEMENT" ? "selected " : ''}>En acheminement</option>
-	            <option value="BLOQUE" ${colis.acheminement.etat == "BLOQUE" ? "selected " : ''}>Bloqué</option>
-	            <option value="LIVRE" ${colis.acheminement.etat == "LIVRE" ? "selected " : ''}>Livré</option>
+	            <option value="EN_ATTENTE" ${colis.acheminement.etat.name() == "EN_ATTENTE" ? "selected " : ''}>En attente</option>
+	            <option value="EN_ACHEMINEMENT" ${colis.acheminement.etat.name() == "EN_ACHEMINEMENT" ? "selected " : ''}>En acheminement</option>
+	            <option value="BLOQUE" ${colis.acheminement.etat.name() == "BLOQUE" ? "selected " : ''}>Bloqué</option>
+	            <option value="LIVRE" ${colis.acheminement.etat.name() == "LIVRE" ? "selected " : ''}>Livré</option>
             </select>
             
             <br>
             <br>
 
             <input type="submit">
+            
 			
 			
 		</form>

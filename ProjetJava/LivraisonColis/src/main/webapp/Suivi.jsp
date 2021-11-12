@@ -23,7 +23,7 @@
 			Latitude : ${ colis.acheminement.latitude } <br>
 			Longitude : ${ colis.acheminement.longitude } <br>
 			Emplacement : ${ colis.acheminement.emplacement } <br>
-			Etat : ${ colis.acheminement.etat } <br>			
+			Etat : ${colis.acheminement.etat.name().substring(0,1).concat(colis.acheminement.etat.name().substring(1).toLowerCase().replace("_", " ")) } <br>			
 		</p>
 	</body>
 </html>
