@@ -43,16 +43,16 @@
             <th scope="col"></th>
             </thead>
 
-            <tbody>
             <c:forEach items="${requestScope['list']}" var="colis">
-                <th scope="col"><a href="Suivi?id=${colis.id}">${colis.id}</a></th>
-                <th scope="col">${colis.origine}</th>
-                <th scope="col">${colis.destination}</th>
-                <th scope="col">${colis.valeur}e</th>
-                <th scope="col">${colis.poid} kg</th>
-                <th scope="col"><a href="Progression?id=${colis.id}" class="btn btn-lg btn-outline-primary fs-6">Modifier</a></th>
+                <tbody>
+                    <th scope="col"><a href="Suivi?id=${colis.id}">${colis.id}</a></th>
+                    <th scope="col">${colis.origine}</th>
+                    <th scope="col">${colis.destination}</th>
+                    <th scope="col">${colis.valeur}e</th>
+                    <th scope="col">${colis.poid} kg</th>
+                    <th scope="col"><a href="Progression?id=${colis.id}" class="btn btn-lg btn-outline-primary fs-6">Modifier</a></th>
+                </tbody>
             </c:forEach>
-            </tbody>
         </table>
 
     </div>
@@ -60,7 +60,13 @@
 
 </main>
 
+<footer class="d-flex flex-wrap justify-content-between align-items-center p-3 my-4 border-top">
+    <p class="col-md-4 mb-0 text-muted">INFO 706</p>
 
+    <a href="Index" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark">
+        Retour Menu Principal
+    </a>
+</footer>
 
 </body>
 
