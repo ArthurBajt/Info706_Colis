@@ -1,4 +1,5 @@
 # Compte rendu TP Info 706
+> Lacerenza Loris & Bajt Arthur
 - <a href="#1">Utilisation de l'application</a>
 - <a href="#2">Choix d'implémentation</a>
 
