@@ -40,13 +40,13 @@
 		<!-- latitude -->
 		<div class="row border p-2">
 			<h4 class="col-3">latitude :</h4>
-			<input class="col-3" id="latitude" name="latitude" type="number" value="${ colis.acheminement.latitude }">
+			<input class="col-3" id="latitude" name="latitude" type="number" value="${ colis.acheminement.latitude }" >
 		</div>
 
 		<!-- longitude -->
 		<div class="row border p-2">
 			<h4 class="col-3">longitude :</h4>
-			<input class="col-3" id="longitude" name="longitude" type="number" value="${ colis.acheminement.longitude }">
+			<input class="col-3" id="longitude" name="longitude" type="number" value="${ colis.acheminement.longitude }" >
 		</div>
 
 		<!-- emplacement -->
@@ -59,6 +59,7 @@
 		<div class="row border p-2">
 			<h4 class="col-3">Destination :</h4>
 			<select name="etat" class="col-5">
+				<option></option>
 				<option value="ENREGISTREMENT" ${colis.acheminement.etat.name() == "ENREGISTREMENT" ? "selected " : ''}>Enregistrement</option>
 				<option value="EN_ATTENTE" ${colis.acheminement.etat == "EN_ATTENTE" ? "selected " : ''}>En attente</option>
 				<option value="EN_ACHEMINEMENT" ${colis.acheminement.etat == "EN_ACHEMINEMENT" ? "selected " : ''}>En acheminement</option>
@@ -68,7 +69,10 @@
 		</div>
 
 		<div class="row">
-			<input type="submit" class="btn btn-primary">
+			
+			<input type="submit" class="btn btn-primary col mx-2" value="Modifier">
+			<input type="submit" class="btn btn-primary col mx-2" value="Supprimer" formaction="Suppression">
+			
 		</div>
 	</form>
 

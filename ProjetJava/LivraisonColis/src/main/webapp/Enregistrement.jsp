@@ -31,13 +31,13 @@
         <!-- Valeur -->
         <div class="row border p-2">
             <h4 class="col-3">Valeur :</h4>
-            <input class="col-3" id="valeur" name="valeur" value="1" type="number" min="1">
+            <input class="col-3" id="valeur" name="valeur" value="1" type="number" min="1" step="0.01">
         </div>
 
         <!-- Poids -->
         <div class="row border p-2">
             <h4 class="col-3">Poids :</h4>
-            <input class="col-3" id="poid" name="poid" value="1" type="number" min="1">
+            <input class="col-3" id="poid" name="poid" value="1" type="number" min="1" step="0.01">
         </div>
 
         <!-- Origine -->

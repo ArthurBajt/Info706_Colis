@@ -24,16 +24,16 @@ public class ServletProgression extends HttpServlet {
 	
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    	
-    	
-    	
+
     	 long id = -1;
-         if (request.getParameter("id") != null){
+         if (request.getParameter("id") != null && request.getParameter("id") != ""){
              id = Long.parseLong(request.getParameter("id"));
+             
+             Colis c = ejb.findColis(id);
+             request.setAttribute("colis", c);
+             
          }
       	
-         Colis c = ejb.findColis(id);
-         request.setAttribute("colis", c);
          
          request.getRequestDispatcher("/Progression.jsp").forward(request, response);
     }
@@ -41,28 +41,23 @@ public class ServletProgression extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     	long id = -1;
-        if (request.getParameter("id") != null){
+        if (request.getParameter("id") != null && request.getParameter("id") != ""){
             id = Long.parseLong(request.getParameter("id"));
-        }
-        double latitude = Double.parseDouble(request.getParameter("latitude"));
-        double longitude = Double.parseDouble(request.getParameter("longitude"));
-        String emplacement = request.getParameter("emplacement");
-        Etat etat = Etat.valueOf(request.getParameter("etat"));
+            
+            double latitude = Double.parseDouble(request.getParameter("latitude"));
+            double longitude = Double.parseDouble(request.getParameter("longitude"));
+            String emplacement = request.getParameter("emplacement");
+            Etat etat = Etat.valueOf(request.getParameter("etat"));
 
-        response.getWriter().write(Long.toString(id));
-        
-        Colis c = ejb.updateColis(id, latitude,longitude,emplacement,etat);
+            response.getWriter().write(Long.toString(id));
+            
+            Colis c = ejb.updateColis(id, latitude,longitude,emplacement,etat);
+            response.sendRedirect(request.getContextPath() + "/Progression?id=" + Long.toString(c.getId()));
 
-        response.sendRedirect(request.getContextPath() + "/Progression?id=" + Long.toString(c.getId()));
-    }
-    @Override
-    protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    	long id = -1;
-        if (request.getParameter("id") != null){
-            id = Long.parseLong(request.getParameter("id"));
-            ejb.removeColis(id);
         }
         response.sendRedirect(request.getContextPath() + "/Progression" );
 
+
     }
+
 }

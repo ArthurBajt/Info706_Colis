@@ -24,7 +24,7 @@ public class ServletSuivi extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
        long id = -1;
-       if (request.getParameter("id") != null){
+       if (request.getParameter("id") != null && request.getParameter("id") != ""){
            id = Long.parseLong(request.getParameter("id"));
        }
     	
