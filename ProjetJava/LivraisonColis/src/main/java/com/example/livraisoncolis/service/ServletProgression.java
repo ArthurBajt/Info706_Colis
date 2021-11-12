@@ -37,18 +37,19 @@ public class ServletProgression extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    	double latitude = Double.parseDouble(request.getParameter("latitude"));
+    	long id = -1;
+        if (request.getParameter("id") != null){
+            id = Long.parseLong(request.getParameter("id"));
+        }
+        double latitude = Double.parseDouble(request.getParameter("latitude"));
         double longitude = Double.parseDouble(request.getParameter("longitude"));
         String emplacement = request.getParameter("emplacement");
         Etat etat = Etat.valueOf(request.getParameter("etat"));
 
-        Colis c = ejb.updateColis(latitude,longitude,emplacement,etat);
+        response.getWriter().write(Long.toString(id));
+        
+        Colis c = ejb.updateColis(id, latitude,longitude,emplacement,etat);
 
-//        PrintWriter pw = response.getWriter();
-//        pw.println("Nouveau colis avec le num : " + Long.toString(c.getId()));
-//        System.out.println("Nouveau colis avec le num : " + Long.toString(c.getId()));
-//        pw.close();
-
-        response.sendRedirect(request.getContextPath() + "/Suivi?id=" + Long.toString(c.getId()));
+        response.sendRedirect(request.getContextPath() + "/Progression?id=" + Long.toString(c.getId()));
     }
 }

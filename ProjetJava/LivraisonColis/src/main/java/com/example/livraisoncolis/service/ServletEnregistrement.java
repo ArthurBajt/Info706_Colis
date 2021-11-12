@@ -32,11 +32,6 @@ public class ServletEnregistrement extends HttpServlet {
 
         Colis c = colisEJB.addColis(poid, valeur, origine, destination, acheminement);
 
-//        PrintWriter pw = response.getWriter();
-//        pw.println("Nouveau colis avec le num : " + Long.toString(c.getId()));
-//        System.out.println("Nouveau colis avec le num : " + Long.toString(c.getId()));
-//        pw.close();
-
         response.sendRedirect(request.getContextPath() + "/Suivi?id=" + Long.toString(c.getId()));
     }
 }

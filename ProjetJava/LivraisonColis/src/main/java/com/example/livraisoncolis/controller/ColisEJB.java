@@ -48,13 +48,14 @@ public class ColisEJB {
 		em.remove(c);
     }
     
-    public void updateColis(long id, double latitude, double longitude, String emplacement, Etat etat) {
+    public Colis updateColis(long id, double latitude, double longitude, String emplacement, Etat etat) {
 		Colis c = em.find(Colis.class, id);
 		c.getAcheminement().setLatitude(latitude);
 		c.getAcheminement().setLongitude(longitude);
 		c.getAcheminement().setEmplacement(emplacement);
 		c.getAcheminement().setEtat(etat);
 		em.merge(c);
+		return c;
     }
     
     

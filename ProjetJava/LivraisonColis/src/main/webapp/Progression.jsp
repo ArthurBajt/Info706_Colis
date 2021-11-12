@@ -12,12 +12,9 @@
 	<body>
 	    <h1>Modification de la progression de votre Colis</h1>
 	    
-	    <form method="get" action="Progression">
-			Afficher votre colis grace a son Id : <input name="id"  type="text" value="${colis.id }">
-			<input type="submit">
-		</form>
-
 		<form method="post" action="Progression">
+			Afficher votre colis grace a son Id : <input name="id"  type="text" value="${colis.id }">
+			<input type="submit" formmethod="get">
 	
 			<p>Latitude du colis</p>
             <input id="latitude" name="latitude" type="number" value="${ colis.acheminement.latitude }">
