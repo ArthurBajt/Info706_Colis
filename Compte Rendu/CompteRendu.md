@@ -14,7 +14,7 @@ Lien de l'application une fois lancée :
 
 <img src="img/index.png"/>
 
-La page d'acceuille du site vous propose de visualiser les colis en transite.
+La page d'accueil du site vous propose de visualiser les colis en transites.
 
 Depuis celle-ci vous pouvez également :
 - Ajouter un nouveau colis, depuis *"Enregistrement"*.
@@ -27,15 +27,11 @@ Depuis ce formulaire vous creez un nouveau colis.
 
 ### Voir le suivis d'un colis
 <img src="img/Suivis.png"/>
-Ici on peut rechercher un colis avec son numéro et voir son état et ses infosrmations.
+Ici on peut rechercher un colis avec son numéro et voir son état et ses informations.
 
 ### Changer l'état d'un colis
 <img src="img/Progression.png"/>
-Ici on peut modifier la progression d'un colis.
-
-On peut aussi rechercher un colis à modifier.
-
-Ou le supprimer.
+Ici on peut modifier la progression d'un colis, rechercher un colis à modifier, ou le supprimer.
 
 ---
 
@@ -103,7 +99,7 @@ public class ColisEJB {
 
 
 ### Les servelets
-Nous avons creer 4 servelets pour :
+Nous avons creer 5 servelets pour :
 
 #### L'index
 - La methode get, affiche les colis et rend la page Index.jsp avec les colis.
@@ -118,3 +114,6 @@ Nous avons creer 4 servelets pour :
 #### La modification d'un colis
 - La méthode **get** permet simplement d'acceder a un formulaire pour modifier le colis à l'id donnée dans la requette.
 - Et la méthode **post** modifie le colis avec les nouvelles donnée du formulaire.
+
+#### La suppression d'un colis
+- La méthode **post** permet simplement de supprimer un colis via l'id précédemment saisi pour accéder aux fonctions de modification

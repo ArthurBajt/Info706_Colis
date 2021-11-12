@@ -60,7 +60,7 @@
 			<h4 class="col-3">Destination :</h4>
 			<select name="etat" class="col-5">
 				<option></option>
-				<option value="ENREGISTREMENT" ${colis.acheminement.etat.name() == "ENREGISTREMENT" ? "selected " : ''}>Enregistrement</option>
+				<option value="ENREGISTREMENT" ${colis.acheminement.etat == "ENREGISTREMENT" ? "selected " : ''}>Enregistrement</option>
 				<option value="EN_ATTENTE" ${colis.acheminement.etat == "EN_ATTENTE" ? "selected " : ''}>En attente</option>
 				<option value="EN_ACHEMINEMENT" ${colis.acheminement.etat == "EN_ACHEMINEMENT" ? "selected " : ''}>En acheminement</option>
 				<option value="BLOQUE" ${colis.acheminement.etat == "BLOQUE" ? "selected " : ''}>Bloqué</option>
