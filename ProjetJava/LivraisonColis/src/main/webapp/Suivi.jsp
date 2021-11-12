@@ -26,7 +26,7 @@
 
 
 <main class="flex-shrink-0 p-4">
-	<h2 class="text-center">Modifiez la progression d'un colis</h2>
+	<h2 class="text-center">Suivre un colis</h2>
 
 	<form method="get" action="Suivi">
 		<!-- Rechercher -->
