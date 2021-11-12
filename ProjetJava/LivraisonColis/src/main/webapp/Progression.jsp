@@ -40,13 +40,13 @@
 		<!-- latitude -->
 		<div class="row border p-2">
 			<h4 class="col-3">latitude :</h4>
-			<input class="col-3" id="latitude" name="latitude" type="number" value="${ colis.acheminement.latitude }" >
+			<input class="col-3" id="latitude" name="latitude" type="number" value="${ colis.acheminement.latitude }" step="0.00001">
 		</div>
 
 		<!-- longitude -->
 		<div class="row border p-2">
 			<h4 class="col-3">longitude :</h4>
-			<input class="col-3" id="longitude" name="longitude" type="number" value="${ colis.acheminement.longitude }" >
+			<input class="col-3" id="longitude" name="longitude" type="number" value="${ colis.acheminement.longitude }" step="0.00001">
 		</div>
 
 		<!-- emplacement -->
