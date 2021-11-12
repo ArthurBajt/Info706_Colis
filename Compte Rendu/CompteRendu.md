@@ -98,8 +98,8 @@ public class ColisEJB {
 *voir ColisEJB.java pour le détail des fonctions*
 
 
-### Les servelets
-Nous avons creer 5 servelets pour :
+### Les servlets
+Nous avons créé 5 servelets pour :
 
 #### L'index
 - La methode get, affiche les colis et rend la page Index.jsp avec les colis.
