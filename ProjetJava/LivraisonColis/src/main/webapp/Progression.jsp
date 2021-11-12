@@ -30,7 +30,7 @@
 	<form method="post" action="Progression">
 		<!-- Rechercher -->
 		<div class="row border p-2 text-center">
-			<h4 class="col">Numéro du colis</h4>
+			<h4 class="col">Numï¿½ro du colis</h4>
 			<input class="col" name="id"  type="text" value="${colis.id }">
 			<input type="submit" formmethod="get" class="col-3 btn btn-success m-1" value="Rechercher">
 		</div>
@@ -62,8 +62,8 @@
 				<option value="ENREGISTREMENT" ${colis.acheminement.etat.name() == "ENREGISTREMENT" ? "selected " : ''}>Enregistrement</option>
 				<option value="EN_ATTENTE" ${colis.acheminement.etat == "EN_ATTENTE" ? "selected " : ''}>En attente</option>
 				<option value="EN_ACHEMINEMENT" ${colis.acheminement.etat == "EN_ACHEMINEMENT" ? "selected " : ''}>En acheminement</option>
-				<option value="BLOQUE" ${colis.acheminement.etat == "BLOQUE" ? "selected " : ''}>Bloqué</option>
-				<option value="LIVRE" ${colis.acheminement.etat == "LIVRE" ? "selected " : ''}>Livré</option>
+				<option value="BLOQUE" ${colis.acheminement.etat == "BLOQUE" ? "selected " : ''}>Bloquï¿½</option>
+				<option value="LIVRE" ${colis.acheminement.etat == "LIVRE" ? "selected " : ''}>Livrï¿½</option>
 			</select>
 		</div>
 

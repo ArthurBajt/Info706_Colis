@@ -34,7 +34,7 @@
     <div class="container table-responsive">
         <table class="table table-striped table-sm">
             <thead>
-            <th scope="col">N°</th>
+            <th scope="col">Nï¿½</th>
             <th scope="col">Origine</th>
             <th scope="col">Destination</th>
             <th scope="col">Valeur</th>

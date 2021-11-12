@@ -30,7 +30,7 @@
 	<form method="get" action="Suivi">
 		<!-- Rechercher -->
 		<div class="row border p-2 text-center">
-			<h4 class="col">Numéro du colis</h4>
+			<h4 class="col">Numï¿½ro du colis</h4>
 			<input class="col" name="id"  type="text" value="${colis.id }">
 			<input type="submit" formmethod="get" class="col-3 btn btn-success m-1" value="Rechercher">
 		</div>
@@ -105,7 +105,7 @@
 		<div class="row border p-2">
 			<h4 class="col-3">Etat :</h4>
 			<p class="col">
-				${colis.acheminement.etat}
+				${colis.acheminement.etat.name().substring(0,1).concat(colis.acheminement.etat.name().substring(1).toLowerCase().replace("_", " "))}
 			</p>
 		</div>
 
