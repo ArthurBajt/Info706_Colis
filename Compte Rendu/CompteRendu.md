@@ -34,9 +34,7 @@ Ici on peut modifier la progression d'un colis.
 
 On peut aussi rechercher un colis à modifier.
 
-### Supprimer colis
-<img src="img/Supprimer.png"/>
-// todo
+Ou le supprimer.
 
 ---
 
